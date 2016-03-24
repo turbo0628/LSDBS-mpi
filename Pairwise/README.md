@@ -27,26 +27,24 @@ Input Files:
 
 ###Typical Search Example
 
-	You could access to the swiss protein database using the following url:
+You could access to the swiss protein database using the following url:
+ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz
+This database is quite small and not likely to fully feed the devices.
 
-	ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz
+We use the env_nr database from NCBI as an example:
 
-	This database is quite small and not likely to fully feed the devices.
+Firstly download the database
+<pre><code>$wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/env_nr.gz</code></pre>
 
-	We use the env_nr database from NCBI as an example:
+And then unzip the tarball
+<pre><code>$gunzip env_nr.gz</code></pre>
 
-	Firstly download the database
-	<pre><code>$wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/env_nr.gz</code></pre>
+Process the database, don't forget the -ppn 1 parameter.
 
-	And then unzip the tarball
-	<pre><code>$gunzip env_nr.gz</code></pre>
+<pre><code>$mpirun -hosts s1,s2,s3 -ppn 1 ./DBmaker-mpi env_nr</code></pre>
+Screen layout:
 
-	Process the database, don't forget the -ppn 1 parameter.
-
-	<pre><code>$mpirun -hosts s1,s2,s3 -ppn 1 ./DBmaker-mpi env_nr</code></pre>
-	Screen layout:
-
-	<pre><code>flushing out chunk 0 of size 256MB
+<pre><code>flushing out chunk 0 of size 256MB
 	flushing out chunk 1 of size 255MB
 	flushing out chunk 2 of size 255MB
 	flushing out chunk 3 of size 255MB
@@ -56,13 +54,13 @@ Input Files:
 	total sequence num is 6865992 68c448
 	closing files
 	file closed
-	</code></pre>
+</code></pre>
 
-	Now you can search the database with the example queries. Again, please use the same hosts and always specify -ppn 1
+Now you can search the database with the example queries. Again, please use the same hosts and always specify -ppn 1
 	<pre><code>$mpirun -hosts s1,s2,s3 -ppn 1 ./LSDBS-mpi -q example_queries/q20-Q9UKN1.fasta -db ./env_nr
 	</code></pre>
 
-	Screen layout:
+Screen layout:
 	<pre><code>query path example_queries/q20-Q9UKN1.fasta
 	db path ./env_nr
 	number of available CPUs: 24
