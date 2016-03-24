@@ -6,8 +6,8 @@ The DBmaker-mpi is an auxiliary program to carry out the database preprocessing 
 This program generates three files with .map .seq .title extensions which stored all the information in the database. 
 Please specify the hosts by s1, s2, s3 and specify only one process on one node (-ppn 1). 
 
-<pre><code>mpirun -hosts s1,s2,s3 -ppn 1 ./DBmaker-mpi  [path_to_databaase_file] [target_path]
-</code></pre>
+<pre><code>mpirun -hosts s1,s2,s3 -ppn 1 ./DBmaker-mpi  [path_to_databaase_file] [target_path]</code></pre>
+
 The program distribute the database file on to the specified hosts, and when searching, please specify the same hosts. Currently only databases in fasta format are accepted.
 
 The LSDBS-mpi search the processed database using both CPUs and Intel Phi cards.
@@ -23,7 +23,7 @@ Input Files:
 	-g <int> (gap open penalty, default = 10)
 	-e <int> (gap extend penalty, default = 2)
 	-v       (verbose, show current search progress and system configuration)
-	</code></pre>
+</code></pre>
 
 ###Typical Search Example
 
