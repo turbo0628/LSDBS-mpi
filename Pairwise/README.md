@@ -77,8 +77,8 @@ Input Files:
 	MIC computing time 31.164000s, AARes 392385024, GCUPs 68.998522
 	SSE computing time 33.890000s, AARes 596055552, GCUPs 96.381954
 	MIC computing time 31.425000s, AARes 395311616, GCUPs 68.935805
-#Recalc# symbol size 2.26MB
-#Recalc# sequence num 993
+	#Recalc# symbol size 2.26MB
+	#Recalc# sequence num 993
 	Recalculator takes 0.27s
 	total calculation time: 34.737000, GCUPS 216.026073
 	, total residue 1369360896
