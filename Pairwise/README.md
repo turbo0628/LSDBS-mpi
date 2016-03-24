@@ -36,17 +36,14 @@ Input Files:
 	We use the env_nr database from NCBI as an example:
 
 	Firstly download the database
-	<pre><code>$wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/env_nr.gz
-	</code></pre>
+	<pre><code>$wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/env_nr.gz</code></pre>
 
 	And then unzip the tarball
-	<pre><code>$gunzip env_nr.gz
-	</code></pre>
+	<pre><code>$gunzip env_nr.gz</code></pre>
 
 	Process the database, don't forget the -ppn 1 parameter.
 
-	<pre><code>$mpirun -hosts s1,s2,s3 -ppn 1 ./DBmaker-mpi env_nr
-	</code></pre>
+	<pre><code>$mpirun -hosts s1,s2,s3 -ppn 1 ./DBmaker-mpi env_nr</code></pre>
 	Screen layout:
 
 	<pre><code>flushing out chunk 0 of size 256MB
@@ -94,4 +91,4 @@ Input Files:
 	score 308 -- >gi|136135495|gb|EBM14790.1| hypothetical protein GOS_8455521, partial [marine metagenome]
 	score 307 -- >gi|143406335|gb|EDE78403.1| hypothetical protein GOS_1070628, partial [marine metagenome]
 	--------------------------------------------
-	</code></pre>
+</code></pre>
