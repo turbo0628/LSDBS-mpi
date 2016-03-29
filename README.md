@@ -17,12 +17,10 @@ The 28th IEEE International Parallel & Distributed Processing Symposium (IPDPS 2
 
 ##Usage
 
-We provide binaries compiled with ICC 15.0.0 on CENTOS 6.4. MPSS 3.2.1-1 or later and Composer XE 2015 are recommended to build runtime environment.
+We provide binaries compiled with ICC 15.0.0 on CENTOS 6.4. MPSS 3.2.1-1 or later and Composer XE 2015 are recommended to build runtime environment. The MPI library used is Intel(R) MPI Library for Linux* OS, Version 5.0 Update 1.
 
-Please refer to specific readme file for detailed usages.
-
-
+Please refer to the README file with respect to the application for detailed usages.
 
 ##Contacts
 
-	Please contact Weiguo,Liu ( weiguo.liu@sdu.edu.cn) for support. We welcome any bug reporting and improvement suggestions.
+Please contact Weiguo,Liu ( weiguo.liu@sdu.edu.cn) for support. We welcome any bug reporting and improvement suggestions.
